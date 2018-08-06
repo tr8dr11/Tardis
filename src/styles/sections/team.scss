@@ -1,0 +1,80 @@
+@import '../vars';
+@import '../mixins';
+
+.team {
+  background-color: $black;
+  padding: 115px 0px 50px;
+
+  .subtitle {
+    max-width: 750px;
+  }
+
+  &__list {
+    margin: 75px 0 0 0;
+    @include row(4, 40px, 42px);
+  }
+}
+
+.team-item {
+  &__name {
+    display: block;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.39;
+    color: white;
+    margin-bottom: 5px;
+  }
+
+  &__position {
+    display: block;
+    font-weight: 300;
+    font-size: 15px;
+    color: $gray;
+    margin-bottom: 10px;
+  }
+
+  &__social {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+    opacity: .3;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+@media only screen and (max-width: $tablet-landscape-max) {
+  .team {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: $tablet-portrait-max) {
+  .team {
+    &__list {
+      @include row(3, 40px, 42px);
+      margin-top: 50px;
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile-max) {
+  .team {
+    &__list {
+      @include row(2, 0px, 25px);
+      margin-top: 75px;
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile-small-max) {
+  .team {
+    &__list {
+      @include row(1, 0px, 25px);
+    }
+  }
+}

@@ -1,0 +1,70 @@
+@import '../vars';
+@import '../mixins';
+
+.publications {
+  background-color: $black;
+  padding: 55px 0px 85px;
+
+  h2 {
+    margin-bottom: 25px;
+  }
+
+  &__list {
+    margin: 90px 0 0 0;
+    @include row(4, 105px, 40px);
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+
+    > li {
+      position: relative;
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__quote {
+    display: block;
+    margin-bottom: 25px;
+    font-size: 18px;
+    line-height: 1.39;
+    font-weight: 300;
+    color: white;
+    max-width: 620px;
+    color: var(--white);
+  }
+
+  &__quote-name {
+    font-size: 15px;
+    max-width: 620px;
+    line-height: 1.33;
+    color: $gray;
+    display: block;
+  }
+}
+
+@media only screen and (max-width: $tablet-landscape-max) {
+  .publications {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: $tablet-portrait-max) {
+  .publications {
+    &__list {
+      @include row(2, 40px, 80px);
+      margin-top: 50px;
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile-small-max) {
+  .publications {
+    &__list {
+      @include row(1, 0px, 35px);
+    }
+  }
+}

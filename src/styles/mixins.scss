@@ -1,0 +1,28 @@
+@mixin row($itemsInRowCount, $itemMarginLeft, $itemMarginDown) {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-left: -$itemMarginLeft;
+  padding: 0;
+  list-style: none;
+
+  > li, > div {
+    padding: 0 0 $itemMarginDown $itemMarginLeft;
+    flex: 0 0 (100% / $itemsInRowCount);
+    width: 100% / $itemsInRowCount;
+  }
+}
+
+@mixin tablet-container() {
+  @media only screen and (min-width: $tablet-portrait-max + 1px) and (max-width: $tablet-landscape-max) {
+    overflow-x: scroll;
+    width: calc(100% + 90px);
+    margin-left: -45px;
+    padding: 0 45px;
+
+    > div {
+      width: $tablet-landscape-max;
+    }
+  }
+}

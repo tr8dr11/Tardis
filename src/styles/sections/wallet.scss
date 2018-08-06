@@ -1,0 +1,85 @@
+@import '../vars';
+@import '../mixins';
+
+.wallet {
+  background-color: $black;
+  padding: 65px 0px 58px 0px;
+
+  .subtitle {
+    max-width: 550px;
+  }
+
+  &__list {
+    @include row(3, 50px, 40px);
+    margin: 75px 0 0 0;
+  }
+}
+
+.wallet-item {
+  position: relative;
+
+  &__image {
+    width: 100%;
+    margin-bottom: 25px;
+
+    img {
+      height: 120px;
+    }
+  }
+
+  &__name {
+    display: block;
+    font-size: 15px;
+    line-height: 1.33;
+    color: $gray;
+    margin-bottom: 5px;
+  }
+
+  &__title {
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    line-height: 1.39;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 1.33;
+    color: $gray;
+  }
+}
+
+@media only screen and (max-width: $tablet-landscape-max) {
+  .wallet {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: $tablet-landscape-max) {
+  .wallet {
+    &__list {
+      @include row(3, 40px, 40px);
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile-max) {
+  .wallet {
+    padding-bottom: 0;
+
+    &__list {
+      @include row(2, 0px, 75px);
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile-small-max) {
+  .wallet {
+    &__list {
+      @include row(1, 0px, 75px);
+    }
+  }
+}

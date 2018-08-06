@@ -1,0 +1,146 @@
+@import '../vars';
+@import '../mixins';
+
+.contacts {
+  background-image: radial-gradient(circle at 50% 0, #0643e8, #17171d);
+  padding: 150px 0px 0px 0px;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__col {
+    flex: 0 0 45%;
+  }
+
+  &__title {
+    display: block;
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 25px;
+  }
+
+  &__text {
+    font-family: Formular;
+    line-height: 1.39;
+    font-size: 18px;
+    color: white;
+  }
+
+  &__socials {
+    margin-top: 55px;
+
+    a {
+      margin-right: 26px;
+      opacity: 1;
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  &__email {
+    display: inline-block;
+    vertical-align: middle;
+    width: 175px;
+    height: 45px;
+    border: solid 1px rgba(255, 255, 255, .1);
+    padding-left: 15px;
+    font-size: 15px;
+    text-align: left;
+    margin-right: 0px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: transparent;
+    outline: none;
+    margin-right: 30px;
+    margin-top: 45px;
+
+    &:placeholder {
+      font-size: 15px;
+      color: rgba(255, 255, 255, .3);
+    }
+  }
+
+  &__submit {
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid rgba(255, 255, 255, .1);
+    cursor: pointer;
+    width: 170px;
+    font-size: 15px;
+    height: 45px;
+    line-height: 45px;
+    background: transparent;
+    transition: all 0.3s ease;
+    outline: none;
+    color: white;
+    margin-top: 45px;
+
+    &:hover {
+      color: white;
+      border: 1px solid $blue;
+      background-color: $blue;
+    }
+  }
+
+  &__thanks {
+    display: none;
+    color: white;
+    font-size: 15;
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: $tablet-landscape-max) {
+  .contacts {
+    padding-top: 100px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .contacts {
+    &__col {
+      flex: 0 0 47%;
+    }
+  }
+}
+
+@media only screen and (max-width: $tablet-portrait-max) {
+  .contacts {
+    &__row {
+      display: block;
+    }
+
+    &__text {
+      display: block;
+      max-width: 680px;
+
+      &_news {
+        max-width: 550px;
+      }
+    }
+
+    &__col {
+      &:last-child {
+        margin-top: 75px;
+      }
+    }
+
+    &__form form {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__submit, &__email {
+      flex: 0 0 auto 50%;
+      width: 50%;
+    }
+
+    &__email {
+      margin-right: 40px;
+    }
+  }
+}

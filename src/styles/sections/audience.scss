@@ -1,0 +1,53 @@
+@import '../vars';
+@import '../mixins';
+
+.audience {
+  background-color: $black;
+  padding: 150px 0px 50px 0px;
+
+  h2 {
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    margin: 0;
+    @include row(4, 50px, 50px);
+  }
+}
+
+.audience-item {
+  flex: 1 0 auto;
+
+  &__title {
+    display: block;
+    font-weight: 400;
+    font-size: 18px;
+    color: white;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 1.35;
+    color: $gray;
+  }
+}
+
+@media only screen and (max-width: $tablet-landscape-max) {
+  .audience {
+    padding-top: 100px;
+    padding-bottom: 0;
+
+    &__list {
+      @include row(2, 40px, 50px);
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile-small-max) {
+  .audience {
+    &__list {
+      @include row(1, 0px, 50px);
+    }
+  }
+}

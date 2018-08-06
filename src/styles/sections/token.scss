@@ -1,0 +1,110 @@
+@import '../vars';
+@import '../mixins';
+
+.token {
+  background-color: $black;
+  padding: 58px 0px 75px 0px;
+
+  .subtitle {
+    max-width: 750px;
+  }
+
+  &__center {
+    margin: 0 auto;
+    margin-top: 75px;
+    position: relative;
+    height: 450px;
+    width: 450px;
+
+    &.animated {
+      .token__semicircle {
+        &[data-position="1"] {
+          transform: translateX(-154%);
+        }
+
+        &[data-position="2"] {
+          transform: translateX(-76%);
+        }
+
+        &[data-position="4"] {
+          transform: scaleX(-1) translateX(-76%);
+        }
+
+        &[data-position="5"] {
+          transform: scaleX(-1) translateX(-154%);
+        }
+      }
+    }
+  }
+
+  &__circle, &__semicircle {
+    width: 450px;
+    height: 100%;
+    position: absolute;
+    background-image: url('/images/token/1.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    transition: all 1.5s ease;
+    z-index: 3;
+  }
+
+  &__semicircle {
+    background-image: url('/images/token/2.png');
+    width: 225px;
+
+    &[data-position="1"] {
+      left: 0;
+      z-index: 1;
+    }
+
+    &[data-position="2"] {
+      left: 0;
+      z-index: 2;
+    }
+
+    &[data-position="4"] {
+      right: 0;
+      z-index: 2;
+      transform: scaleX(-1);
+    }
+
+    &[data-position="5"] {
+      right: 0;
+      z-index: 1;
+      transform: scaleX(-1);
+    }
+  }
+}
+
+@media only screen and (max-width: $tablet-landscape-max) {
+  .token {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    &__center, &__circle {
+      width: 35vw;
+      height: 35vw;
+    }
+
+    &__semicircle {
+      width: 17.5vw;
+    }
+  }
+}
+
+
+@media only screen and (max-width: $mobile-max) {
+  .token {
+    &__center, &__circle {
+      width: 37vw;
+      height: 37vw;
+    }
+
+    &__semicircle {
+      width: 18.5vw;
+    }
+  }
+}
+
+

@@ -1,0 +1,80 @@
+@import '../vars';
+@import '../mixins';
+
+.appointment {
+  background-color: $black;
+  padding: 75px 0px 115px 0px;
+
+  &__table {
+    margin-top: 50px;
+  }
+
+  &__row {
+    display: flex;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+
+    &:nth-child(2) {
+      border-top: 0;
+    }
+
+    &:last-child {
+      border-bottom: 1px solid rgba(255, 255, 255, .1);
+    }
+  }
+
+  &__col {
+    flex: 1 1 auto;
+    min-width: 30%;
+    padding: 15px 12px;
+  }
+
+  &__percent, &__title {
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+  }
+
+  &__text {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.33;
+    color: $gray;
+  }
+}
+
+@media only screen and (max-width: $tablet-landscape-max) {
+  .appointment {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+@media only screen and (max-width: $mobile-max) {
+  .appointment {
+    &__row {
+      display: block;
+      padding-top: 15px;
+      padding-bottom: 25px;
+
+      &:first-child {
+        border-bottom: 2px solid white;
+      }
+    }
+
+    &__col {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    &__percent, &__title {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .lines {
+      &:after {
+        display: none;
+      }
+    }
+  }
+}

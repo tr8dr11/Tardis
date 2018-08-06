@@ -1,0 +1,79 @@
+@import '../vars';
+@import '../mixins';
+
+.assistant {
+  background-color: $black;
+  padding: 87px 0px 65px 0px;
+
+  .subtitle {
+    display: block;
+    color: white;
+    max-width: 750px;
+  }
+
+  &__list {
+    margin: 75px 0 0 0;
+    @include row(3, 50px, 40px);
+  }
+}
+
+.assistant-item {
+  &__image {
+    position: relative;
+    margin-bottom: 25px;
+
+    img {
+      width: 50px;
+    }
+  }
+
+  &__title {
+    display: block;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.39;
+    color: white;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    color: $gray;
+    font-size: 15px;
+    line-height: 1.33;
+  }
+}
+
+@media only screen and (max-width: $tablet-landscape-max) {
+  .assistant {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: $tablet-portrait-max) {
+  .assistant {
+    padding-top: 25px;
+
+    &__list {
+      @include row(3, 40px, 40px);
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile-max) {
+  .assistant {
+    padding-bottom: 0px;
+
+    &__list {
+      @include row(2, 0px, 75px);
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile-small-max) {
+  .assistant {
+    &__list {
+      @include row(1, 0px, 75px);
+    }
+  }
+}

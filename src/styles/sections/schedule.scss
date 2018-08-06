@@ -1,0 +1,89 @@
+@import '../vars';
+@import '../mixins';
+
+.schedule {
+  background-color: $black;
+  padding: 75px 0px 75px 0px;
+
+  .subtitle {
+    max-width: 750px;
+  }
+
+  &__calendar {
+    @include row(6, 0px, 0px);
+    margin-top: 75px;
+    height: 200px;
+    display: flex;
+  }
+
+  &__col {
+    &_active {
+      background-image: radial-gradient(circle at 0% 50%, rgba(6, 67, 232, 0), #0643e8);
+    }
+  }
+
+  &__date {
+    position: relative;
+    height: 100px;
+  }
+
+  &__month {
+    position: absolute;
+    left: 10px;
+    top: 0;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.39;
+
+    &_mobile {
+      display: none;
+    }
+  }
+
+  &__day {
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  &__text {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    color: $gray;
+    font-size: 15px;
+  }
+
+  &__calendar-container {
+    @include tablet-container();
+  }
+}
+
+@media only screen and (max-width: $tablet-landscape-max) {
+  .schedule {
+    padding-bottom: 50px;
+  }
+}
+
+
+@media only screen and (max-width: $tablet-portrait-max) {
+  .schedule {
+    &__calendar {
+      display: block;
+
+      > div, > li {
+        width: 100%;
+      }
+    }
+
+    &__col {
+      height: 200px;
+    }
+
+    &__month_mobile {
+      display: block;
+    }
+  }
+}

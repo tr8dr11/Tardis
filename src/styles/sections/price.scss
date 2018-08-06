@@ -1,0 +1,86 @@
+@import '../vars';
+@import '../mixins';
+
+.price {
+  background-color: $black;
+  padding: 75px 0px 75px 0px;
+
+  .subtitle {
+    max-width: 550px;
+  }
+
+  &__list {
+    @include row(4, 0px, 0px);
+    margin: 75px 0 0 0;
+    height: 200px;
+    display: flex;
+  }
+
+  &__col {
+    position: relative;
+
+    > div {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-image: linear-gradient(to top, rgba(6, 67, 232, 0), #0643e8);
+    }
+
+    &:nth-child(2) > div {
+      top: 65px;
+    }
+
+    &:nth-child(3) > div {
+      top: 100px;
+    }
+
+    &:nth-child(4) > div {
+      top: 125px;
+    }
+  }
+
+  &__eth {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1;
+    color: white;
+  }
+
+  &__date {
+    position: absolute;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.33;
+    color: $gray;
+    left: 10px;
+    bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: $tablet-landscape-max) {
+  .price {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+@media only screen and (max-width: $tablet-portrait-max) {
+  .price {
+    &__list {
+      display: block;
+
+      > div, > li {
+        width: 100%;
+      }
+    }
+
+    &__col {
+      height: 200px;
+    }
+  }
+}
