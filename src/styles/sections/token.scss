@@ -41,7 +41,7 @@
     width: 450px;
     height: 100%;
     position: absolute;
-    background-image: url('/images/token/1.png');
+    background-image: url('../images/token/1.png');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
@@ -50,7 +50,7 @@
   }
 
   &__semicircle {
-    background-image: url('/images/token/2.png');
+    background-image: url('../images/token/2.png');
     width: 225px;
 
     &[data-position="1"] {
