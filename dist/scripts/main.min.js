@@ -1,10 +1,10 @@
 var tabletMax = 950;
 var mobileMax = 767;
 var mobileSmallMax = 500;
+var throttle = 5;
+var scrollTimeout;
 
 $(document).ready(function() {
-  var headerLangListDOM = $('.js-header-lang-list');
-  var headerLangChoiceDOM = $('.js-header-lang-choice');
   var showPopupButtonsDOM = $('.js-show-popup');
   var popupsDOM = $('.js-popup');
   var popupsCloseDOM = $('.js-popup-close');
@@ -15,9 +15,6 @@ $(document).ready(function() {
   var appointmentRow1DOM = $('#js-appointment-row-1');
   var appointmentRow2DOM = $('#js-appointment-row-2');
   var appointmentRow3DOM = $('#js-appointment-row-3');
-  var scrollListDOM = $('.js-scroll-list');
-  var touchStart = 0;
-  var scrollParalaxElement = null;
   var sliders = $('.js-slider');
 
   function binds() {
@@ -25,26 +22,8 @@ $(document).ready(function() {
       scrollToTop();
     })
 
-    $(window).on('wheel', function(event){
-      if(event.originalEvent.deltaY > 0){
-        scrollParallaxMove();
-        scrollDown();
-      } else {
-        scrollParallaxStop();
-      }
-    });
-
-    document.addEventListener('touchstart', function(event) {
-      touchStart = event.touches[0].screenY;
-    });
-
-    document.addEventListener('touchmove', function(event) {
-      if (event.touches[0].screenY <= touchStart) {
-        scrollDown(true);
-        scrollParallaxMove(true);
-      } else {
-        scrollParallaxStop();
-      }
+    $(window).on('scroll', function(event){
+      scroll();
     });
 
     $(window).on('resize', function() {
@@ -55,15 +34,6 @@ $(document).ready(function() {
         }
       })
       setTimeout(slidersInit, 100);
-    });
-
-    $(document).on('click', function() {
-      headerLangListDOM.removeClass('visible')
-    });
-
-    headerLangChoiceDOM.on('click', function(event) {
-      headerLangListDOM.toggleClass('visible');
-      event.stopPropagation();
     });
 
     showPopupButtonsDOM.on('click', function(event) {
@@ -101,65 +71,20 @@ $(document).ready(function() {
     })
   }
 
-  function scrollDown(isTouch) {
-    var viewportTop = $(window).scrollTop();
-    var tokenCenterTop = tokenCenterDOM.offset().top;
+  function scroll() {
+    if (!scrollTimeout) {
+      scrollTimeout = setTimeout(function () {
+        var viewportTop = $(window).scrollTop();
+        var tokenCenterTop = tokenCenterDOM.offset().top;
 
-    if (viewportTop + ($(window).height() / 1.5) >= tokenCenterTop &&
-      !tokenCenterDOM.hasClass('animated')
-    ) {
-      tokenCenterDOM.addClass('animated');
-    }
-
-    if (window.matchMedia('(max-width: ' + tabletMax + 'px)').matches) {
-      return null;
-    }
-
-    scrollListDOM.each(function() {
-      var elementTop = $(this).offset().top;
-      var elementHeight = $(this).height();
-      var childWidth = $(this).children().width();
-      var elementPosY = elementTop + elementHeight - $(window).height() + 50;
-
-      if (viewportTop >= elementPosY &&
-        childWidth > $(this).width() && !$(this).data('fixed')
-      ) {
-        $(this).data('fixed', 'start');
-        scrollParalaxElement = $(this);
-        $('body').addClass('fixed');
-
-        if (!isTouch) {
-          $('html, body').scrollTop(elementPosY);
-          setTimeout(() => {
-            $('html, body').scrollTop(elementPosY);
-          }, 10);
+        if (viewportTop + ($(window).height() / 1.5) >= tokenCenterTop &&
+          !tokenCenterDOM.hasClass('animated')
+        ) {
+          tokenCenterDOM.addClass('animated');
         }
-      }
-    });
-  }
 
-  function scrollParallaxStop() {
-    if (scrollParalaxElement) {
-      scrollParalaxElement.removeData('fixed');
-      scrollParalaxElement = null;
-      $('body').removeClass('fixed');
-    }
-  }
-
-  function scrollParallaxMove(isTouch) {
-    if (scrollParalaxElement) {
-      var stepSize = isTouch ? 20 : 50;
-      var scrollLeft = scrollParalaxElement.scrollLeft();
-      var childWidth = scrollParalaxElement.children().width();
-      scrollParalaxElement.scrollLeft(scrollLeft + stepSize);
-
-      if ((scrollLeft + stepSize + scrollParalaxElement.width() >= childWidth) ||
-        (scrollLeft === scrollParalaxElement.scrollLeft()) &&
-        scrollParalaxElement.data('fixed') === 'start'
-      ) {
-        scrollParalaxElement.data('fixed', 'stop');
-        $('body').removeClass('fixed');
-      }
+        scrollTimeout = null;
+      })
     }
   }
 
@@ -201,7 +126,7 @@ $(document).ready(function() {
             infinite: false,
             slidesToShow: slidesToShow,
             adaptiveHeight: true,
-            dots: false,
+            dots: true,
           }).addClass('js-slick-initialize');
 
           childrensDOM.css('min-height', 'auto');

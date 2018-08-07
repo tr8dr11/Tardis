@@ -63,6 +63,7 @@
     font-size: 18px;
     font-weight: 400;
     color: white;
+    z-index: 12;
   }
 
   &__count {
@@ -89,7 +90,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: 2;
+    z-index: 11;
   }
 
   &__list-container {

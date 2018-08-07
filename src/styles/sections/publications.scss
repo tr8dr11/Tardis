@@ -18,6 +18,12 @@
 
     > li {
       position: relative;
+      opacity: .6;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 1;
+      }
 
       img {
         max-width: 100%;
@@ -49,6 +55,10 @@
   .publications {
     padding-top: 30px;
     padding-bottom: 30px;
+
+    &__list li {
+      opacity: 1;
+    }
   }
 }
 

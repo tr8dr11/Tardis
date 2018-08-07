@@ -9,10 +9,13 @@
   <link rel="stylesheet" type="text/css" href="styles/vendor.min.css">
   <link rel="stylesheet" type="text/css" href="styles/styles.min.css">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
- 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/apple-touch-icon-144x144-precomposed.png">
- 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon-114x114-precomposed.png">
- 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72x72-precomposed.png">
- 	<link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="180x180" href="images/apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/apple-touch-icon-152x152.png">
+ 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/apple-touch-icon-144x144.png">
+ 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon-precomposed" sizes="96x96" href="images/android-chrome-96x96.png">
+ 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/android-chrome-72x72.png">
+ 	<link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-57x57.png">
  	<!--[if IE]><link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"><![endif]-->
   <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
   <style type="text/css">
@@ -45,11 +48,18 @@
                 Русский ↓
               </span>
 
-              <div
+              <select
                 class="header__lang-choice js-header-lang-list"
+                onchange="location = this.value;"
               >
-                <a href="">Английский</a>
-              </div>
+                <option>
+                  Русский
+                </option>
+
+                <option>
+                  Английский
+                </option>
+              </select>
             </div>
 
             <ul>
@@ -154,11 +164,18 @@
           Русский&nbsp;↓
         </span>
 
-        <div
+        <select
           class="header__lang-choice js-header-lang-list"
+          onchange="location = this.value;"
         >
-          <a href="">Английский</a>
-        </div>
+          <option>
+            Русский
+          </option>
+
+          <option>
+            Английский
+          </option>
+        </select>
       </div>
     </div>
     <div class="main__blur"></div>
@@ -453,72 +470,70 @@
       <h2>Расписание</h2>
       <span class="subtitle">Продажи начнутся с 6:00 29 августа, инвесторы могут приобрести токены TFT в 4 этапа по принципу «первым пришел, первый получил», пока не будет продано 120 000 000 токенов. </span>
 
-      <div class="schedule__calendar-container js-scroll-list">
-        <div class="schedule__calendar lines js-slider">
-          <div class="schedule__col schedule__col_active">
-            <div class="schedule__date">
-              <span class="schedule__month">Август</span>
-              <span class="schedule__day">15</span>
-            </div>
-            <span class="schedule__text">
-              Презентация<br />
-              и запуск проекта
-            </span>
+      <div class="schedule__calendar lines js-slider">
+        <div class="schedule__col schedule__col_active">
+          <div class="schedule__date">
+            <span class="schedule__month">Август</span>
+            <span class="schedule__day">15</span>
           </div>
+          <span class="schedule__text">
+            Презентация<br />
+            и запуск проекта
+          </span>
+        </div>
 
-          <div class="schedule__col">
-            <div class="schedule__date">
-              <span class="schedule__month schedule__month_mobile">Август</span>
-              <span class="schedule__day">21</span>
-            </div>
-            <span class="schedule__text">
-              Закрытый sale среди<br />
-              ангел-инвесторов
-            </span>
+        <div class="schedule__col">
+          <div class="schedule__date">
+            <span class="schedule__month schedule__month_mobile">Август</span>
+            <span class="schedule__day">21</span>
           </div>
+          <span class="schedule__text">
+            Закрытый sale среди<br />
+            ангел-инвесторов
+          </span>
+        </div>
 
-          <div class="schedule__col">
-            <div class="schedule__date">
-              <span class="schedule__month schedule__month_mobile">Август</span>
-              <span class="schedule__day">29</span>
-            </div>
-            <span class="schedule__text">
-              Открытый Pre-sale
-            </span>
+        <div class="schedule__col">
+          <div class="schedule__date">
+            <span class="schedule__month schedule__month_mobile">Август</span>
+            <span class="schedule__day">29</span>
           </div>
+          <span class="schedule__text">
+            Открытый Pre-sale
+          </span>
+        </div>
 
-          <div class="schedule__col">
-            <div class="schedule__date">
-              <span class="schedule__month">Сентябрь</span>
-              <span class="schedule__day">05</span>
-            </div>
-            <span class="schedule__text">
-              Запуск платформы v0.1
-            </span>
+        <div class="schedule__col">
+          <div class="schedule__date">
+            <span class="schedule__month">Сентябрь</span>
+            <span class="schedule__day">05</span>
           </div>
+          <span class="schedule__text">
+            Запуск платформы v0.1
+          </span>
+        </div>
 
-          <div class="schedule__col">
-            <div class="schedule__date">
-              <span class="schedule__month schedule__month_mobile">Сентябрь</span>
-              <span class="schedule__day">28</span>
-            </div>
-            <span class="schedule__text">
-              Начало ICO
-            </span>
+        <div class="schedule__col">
+          <div class="schedule__date">
+            <span class="schedule__month schedule__month_mobile">Сентябрь</span>
+            <span class="schedule__day">28</span>
           </div>
+          <span class="schedule__text">
+            Начало ICO
+          </span>
+        </div>
 
-          <div class="schedule__col">
-            <div class="schedule__date">
-              <span class="schedule__month">Октябрь</span>
-              <span class="schedule__day">28</span>
-            </div>
-            <span class="schedule__text">
-              Завершение ICO,<br />
-              либо раньше,<br />
-              если все токены<br />
-              проданы
-            </span>
+        <div class="schedule__col">
+          <div class="schedule__date">
+            <span class="schedule__month">Октябрь</span>
+            <span class="schedule__day">28</span>
           </div>
+          <span class="schedule__text">
+            Завершение ICO,<br />
+            либо раньше,<br />
+            если все токены<br />
+            проданы
+          </span>
         </div>
       </div>
     </div>
@@ -529,59 +544,57 @@
       <h2>Структура продаж</h2>
       <span class="subtitle">Больше половины токенов будет распродано, остальные отойдут команде, партнёрам и оставлены в резерве.</span>
 
-      <div class="sales__list-container js-scroll-list">
-        <div class="sales__list lines js-slider">
-          <div class="sales__col">
-            <div class="sales__circle"></div>
-            <div class="sales__top">
-              <span class="sales__title">
-                Продажа
-              </span>
+      <div class="sales__list lines js-slider">
+        <div class="sales__col">
+          <div class="sales__circle"></div>
+          <div class="sales__top">
+            <span class="sales__title">
+              Продажа
+            </span>
 
-              <span class="sales__count">
-                120M
-              </span>
-            </div>
-
-            <span class="sales__percent">
-              60%
+            <span class="sales__count">
+              120M
             </span>
           </div>
 
-          <div class="sales__col">
-            <div class="sales__circle"></div>
-            <div class="sales__top">
-              <span class="sales__title">
-                Команда, партнёры <br />
-                и мероприятия
-              </span>
+          <span class="sales__percent">
+            60%
+          </span>
+        </div>
 
-              <span class="sales__count">
-                70M
-              </span>
-            </div>
+        <div class="sales__col">
+          <div class="sales__circle"></div>
+          <div class="sales__top">
+            <span class="sales__title">
+              Команда, партнёры <br />
+              и мероприятия
+            </span>
 
-            <span class="sales__percent">
-              30%
+            <span class="sales__count">
+              70M
             </span>
           </div>
 
-          <div class="sales__col">
-            <div class="sales__circle"></div>
-            <div class="sales__top">
-              <span class="sales__title">
-                Резерв
-              </span>
+          <span class="sales__percent">
+            30%
+          </span>
+        </div>
 
-              <span class="sales__count">
-                10M
-              </span>
-            </div>
+        <div class="sales__col">
+          <div class="sales__circle"></div>
+          <div class="sales__top">
+            <span class="sales__title">
+              Резерв
+            </span>
 
-            <span class="sales__percent">
-              5%
+            <span class="sales__count">
+              10M
             </span>
           </div>
+
+          <span class="sales__percent">
+            5%
+          </span>
         </div>
       </div>
     </div>

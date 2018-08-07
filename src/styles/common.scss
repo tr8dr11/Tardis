@@ -180,13 +180,22 @@ h2 {
 }
 
 .slick-next, .slick-prev {
-  bottom: -45px;
+  bottom: -65px;
   top: auto;
   z-index: 3;
+  opacity: 1;
+
+  &:before {
+    opacity: 1;
+  }
+
+  &.slick-disabled:before {
+    opacity: .3;
+  }
 }
 
 .slick-prev {
-  left: 0px;
+  left: -4px;
 
   &:before {
     content: "←";
@@ -197,7 +206,7 @@ h2 {
 }
 
 .slick-next {
-  right: 0px;
+  right: -4px;
 
   &:before {
     content: "→";
@@ -205,4 +214,35 @@ h2 {
     font-weight: 400;
     font-family: 'Formular';
   }
+}
+
+.slick-dots {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -55px;
+  text-align: center;
+
+  li {
+    width: 12px;
+    height: 2px;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: rgba(255, 255, 255, .3);
+    margin: 0px 6px;
+
+    button {
+      display: none;
+    }
+
+    &.slick-active {
+      background-color: rgba(255, 255, 255, 1);
+    }
+  }
+}
+
+#widthTempOption {
+ font-size: 14px;
+ font-weight: 300;
 }
