@@ -10,7 +10,7 @@ $(document).ready(function() {
   var popupsCloseDOM = $('.js-popup-close');
   var scrollToDOM = $('.js-scroll-to');
   var tokenCenterDOM = $('.js-token-animate');
-  var contactsFormDOM = $('#js-contacts-form');
+  var contactsFormDOM = $('.js-contacts-form');
   var contactsThanksDOM = $('#js-contacts-thanks');
   var appointmentRow1DOM = $('#js-appointment-row-1');
   var appointmentRow2DOM = $('#js-appointment-row-2');
@@ -88,9 +88,7 @@ $(document).ready(function() {
       event.preventDefault();
     });
 
-    contactsFormDOM.on('submit', function(event) {
-      event.preventDefault();
-
+    contactsFormDOM.on('submit', function() {
       contactsFormDOM.fadeOut(300, function () {
         contactsThanksDOM.fadeIn(300);
       })
