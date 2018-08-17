@@ -3,27 +3,21 @@
 
 .publications {
   background-color: $black;
-  padding: 55px 0px 85px;
+  padding: 75px 0px 150px;
 
   h2 {
     margin-bottom: 25px;
   }
 
   &__list {
-    margin: 90px 0 0 0;
-    @include row(4, 105px, 40px);
+    margin: 60px 0 0 0;
+    @include row(4, 125px, 40px);
     justify-content: flex-start;
     align-items: center;
     align-content: center;
 
     > li {
       position: relative;
-      opacity: .6;
-      transition: opacity 0.3s ease;
-
-      &:hover {
-        opacity: 1;
-      }
 
       img {
         max-width: 100%;
@@ -35,7 +29,7 @@
     display: block;
     margin-bottom: 25px;
     font-size: 18px;
-    line-height: 1.39;
+    line-height: 1.4;
     font-weight: 300;
     color: white;
     max-width: 620px;
@@ -48,26 +42,32 @@
     line-height: 1.33;
     color: $gray;
     display: block;
+    letter-spacing: 0.1px;
   }
 }
 
 @media only screen and (max-width: $tablet-landscape-max) {
   .publications {
-    padding-top: 30px;
-    padding-bottom: 30px;
-
-    &__list li {
-      opacity: 1;
-    }
+    padding-top: 60px;
+    padding-bottom: 100px;
   }
 }
 
 @media only screen and (max-width: $tablet-portrait-max) {
   .publications {
+    padding-bottom: 125px;
+
     &__list {
-      @include row(2, 40px, 80px);
+      @include row(3, 40px, 30px);
       margin-top: 50px;
     }
+  }
+}
+
+@media only screen and (max-width: $mobile-max) {
+  .publications {
+    padding-top: 50px;
+    padding-bottom: 40px;
   }
 }
 
@@ -75,6 +75,10 @@
   .publications {
     &__list {
       @include row(1, 0px, 35px);
+
+      > li img {
+        max-width: 200px;
+      }
     }
   }
 }

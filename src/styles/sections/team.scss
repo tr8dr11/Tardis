@@ -3,7 +3,7 @@
 
 .team {
   background-color: $black;
-  padding: 115px 0px 50px;
+  padding: 100px 0px 75px;
 
   .subtitle {
     max-width: 750px;
@@ -11,7 +11,7 @@
 
   &__list {
     margin: 75px 0 0 0;
-    @include row(4, 40px, 42px);
+    @include row(4, 40px, 50px);
   }
 }
 
@@ -20,7 +20,7 @@
     display: block;
     font-weight: 400;
     font-size: 18px;
-    line-height: 1.39;
+    line-height: 1.4;
     color: white;
     margin-bottom: 5px;
   }
@@ -30,6 +30,7 @@
     font-weight: 300;
     font-size: 15px;
     color: $gray;
+    letter-spacing: 0.1px;
     margin-bottom: 10px;
   }
 
@@ -37,7 +38,7 @@
     display: inline-block;
     vertical-align: middle;
     margin-right: 15px;
-    opacity: .3;
+    opacity: .8;
     transition: opacity 0.3s ease;
 
     &:hover {
@@ -48,8 +49,8 @@
 
 @media only screen and (max-width: $tablet-landscape-max) {
   .team {
-    padding-top: 50px;
-    padding-bottom: 30px;
+    padding-top: 75px;
+    padding-bottom: 48px;
   }
 }
 
@@ -64,6 +65,9 @@
 
 @media only screen and (max-width: $mobile-max) {
   .team {
+    padding-top: 25px;
+    padding-bottom: 25px;
+
     &__list {
       @include row(2, 0px, 25px);
       margin-top: 75px;

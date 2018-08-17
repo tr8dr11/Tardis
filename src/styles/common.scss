@@ -29,14 +29,14 @@ h1, h2 {
 h2 {
   display: block;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 33px;
 }
 
 .subtitle {
   display: block;
   color: white;
-  font-size: 18px;
-  line-height: 1.39;
+  font-size: 20px;
+  line-height: 1.4;
   margin-top: 25px;
 }
 
@@ -56,6 +56,7 @@ h2 {
 }
 
 .social {
+  position: relative;
   display: inline-block;
   vertical-align: middle;
   width: 20px;
@@ -91,6 +92,22 @@ h2 {
 
   &_bitcointalk {
     background-image: url('../images/icons/socials/bitcointalk.svg');
+  }
+
+  &__count {
+    position: absolute;
+    width: 32px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #0643e8;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    font-weight: 400;
+    color: white;
+    text-transform: uppercase;
+    top: -10px;
+    right: -20px;
   }
 }
 
@@ -245,4 +262,80 @@ h2 {
 #widthTempOption {
  font-size: 14px;
  font-weight: 300;
+}
+
+.no-tablet {
+  display: block;
+
+  @media only screen and (max-width: $mobile-max) {
+    display: none;
+  }
+}
+
+.no-mobile {
+  display: block;
+
+  @media only screen and (max-width: $mobile-max) {
+    display: none;
+  }
+}
+
+.only-desktop {
+  display: block;
+
+  @media only screen and (max-width: $tablet-landscape-max) {
+    display: none;
+  }
+}
+
+.only-tablet-landscape {
+  display: none;
+
+  @media only screen and (min-width: $tablet-portrait-max + 1) and (max-width: $tablet-landscape-max) {
+    display: block;
+  }
+}
+
+.only-tablet-portrait {
+  display: none;
+
+  @media only screen and (min-width: $mobile-max + 1) and (max-width: $tablet-portrait-max) {
+    display: block;
+  }
+}
+
+.only-mobile {
+  display: none;
+
+  @media only screen and (min-width: $mobile-small-max + 1) and (max-width: $mobile-max) {
+    display: block;
+  }
+}
+
+.only-tablet-portrait-mobile {
+  display: none;
+
+  @media only screen and (min-width: $mobile-small-max + 1) and (max-width: $tablet-portrait-max) {
+    display: block;
+  }
+}
+
+.only-mobile-small {
+  display: none;
+
+  @media only screen and (max-width: $mobile-small-max) {
+    display: block;
+  }
+}
+
+.img {
+  @media only screen and (max-width: $mobile-small-max) {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  @media only screen and (max-width: 400px) {
+    max-width: 100%;
+    margin: 0 auto;
+  }
 }

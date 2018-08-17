@@ -3,7 +3,7 @@
 
 .schedule {
   background-color: $black;
-  padding: 75px 0px 75px 0px;
+  padding: 97px 0px 97px 0px;
 
   .subtitle {
     max-width: 750px;
@@ -17,6 +17,12 @@
   }
 
   &__col {
+    border-left: 1px solid rgba(255, 255, 255, .25);
+
+    &:first-child {
+      border-right: 1px solid transparent;
+    }
+
     &_active {
       background-image: radial-gradient(circle at 0% 50%, rgba(6, 67, 232, 0), #0643e8);
     }
@@ -29,11 +35,11 @@
 
   &__month {
     position: absolute;
-    left: 10px;
+    left: 15px;
     top: 0;
     font-size: 18px;
     font-weight: 400;
-    line-height: 1.39;
+    line-height: 1.4;
 
     &_mobile {
       display: none;
@@ -43,7 +49,7 @@
   &__day {
     position: absolute;
     bottom: 15px;
-    left: 10px;
+    left: 15px;
     font-size: 18px;
     font-weight: 400;
   }
@@ -51,9 +57,10 @@
   &__text {
     position: relative;
     top: 10px;
-    left: 10px;
+    left: 15px;
     color: $gray;
     font-size: 15px;
+    letter-spacing: 0.1px;
   }
 
   &__calendar-container {
@@ -63,7 +70,8 @@
 
 @media only screen and (max-width: $tablet-landscape-max) {
   .schedule {
-    padding-bottom: 50px;
+    padding-top: 75px;
+    padding-bottom: 75px;
   }
 }
 
@@ -92,6 +100,21 @@
 
     &__month_mobile {
       display: block;
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile-max) {
+  .schedule {
+    padding-top: 25px;
+    padding-bottom: 70px;
+
+    &__calendar {
+      margin-top: 50px;
+    }
+
+    &__col {
+      border-right: 1px solid transparent;
     }
   }
 }

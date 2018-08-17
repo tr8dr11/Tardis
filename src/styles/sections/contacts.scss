@@ -2,8 +2,8 @@
 @import '../mixins';
 
 .contacts {
-  background-image: radial-gradient(circle at 50% 0, #0643e8, #17171d);
-  padding: 150px 0px 0px 0px;
+  background-image: radial-gradient(circle at 50% 0, #0643e8, #000000);
+  padding: 200px 0px 0px 0px;
 
   &__row {
     display: flex;
@@ -17,26 +17,31 @@
   &__title {
     display: block;
     color: white;
-    font-size: 24px;
+    font-size: 33px;
     font-weight: 400;
     margin-bottom: 25px;
   }
 
   &__text {
     font-family: Formular;
-    line-height: 1.39;
-    font-size: 18px;
+    line-height: 1.4;
+    font-size: 20px;
     color: white;
   }
 
   &__socials {
-    margin-top: 55px;
+    margin-top: 50px;
 
     a {
       margin-right: 26px;
-      opacity: 1;
+      opacity: .8;
       text-decoration: none;
       color: inherit;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 
@@ -45,7 +50,7 @@
     vertical-align: middle;
     width: 175px;
     height: 45px;
-    border: solid 1px rgba(255, 255, 255, .1);
+    border: solid 1px rgba(255, 255, 255, .15);
     padding-left: 15px;
     font-size: 15px;
     text-align: left;
@@ -56,18 +61,18 @@
     background: transparent;
     outline: none;
     margin-right: 30px;
-    margin-top: 45px;
+    margin-top: 40px;
 
     &:placeholder {
       font-size: 15px;
-      color: rgba(255, 255, 255, .3);
+      color: rgba(255, 255, 255, .5);
     }
   }
 
   &__submit {
     display: inline-block;
     vertical-align: middle;
-    border: 1px solid rgba(255, 255, 255, .1);
+    border: 1px solid rgba(255, 255, 255, .15);
     cursor: pointer;
     width: 170px;
     font-size: 15px;
@@ -77,7 +82,7 @@
     transition: all 0.3s ease;
     outline: none;
     color: white;
-    margin-top: 45px;
+    margin-top: 40px;
 
     &:hover {
       color: white;
@@ -96,7 +101,7 @@
 
 @media only screen and (max-width: $tablet-landscape-max) {
   .contacts {
-    padding-top: 100px;
+    padding-top: 150px;
   }
 }
 
@@ -110,8 +115,19 @@
 
 @media only screen and (max-width: $tablet-portrait-max) {
   .contacts {
+    padding-top: 100px;
+
     &__row {
       display: block;
+    }
+
+    &__title {
+      font-size: 24px;
+      margin-bottom: 25px;
+    }
+
+    &__text {
+      font-size: 20px;
     }
 
     &__text {
@@ -141,6 +157,27 @@
 
     &__email {
       margin-right: 40px;
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile-max) {
+  .contacts {
+    &__socials {
+      margin-top: 25px;
+    }
+
+    &__form form {
+      display: block;
+
+      input {
+        width: 100%;
+      }
+    }
+
+    &__email, &__submit {
+      margin-top: 25px;
+      margin-right: 0;
     }
   }
 }

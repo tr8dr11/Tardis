@@ -3,7 +3,7 @@
 
 .appointment {
   background-color: $black;
-  padding: 75px 0px 115px 0px;
+  padding: 97px 0px 97px 0px;
 
   &__table {
     margin-top: 50px;
@@ -25,7 +25,7 @@
   &__col {
     flex: 1 1 auto;
     min-width: 30%;
-    padding: 15px 12px;
+    padding: 15px 15px;
   }
 
   &__percent, &__title {
@@ -39,18 +39,22 @@
     font-weight: 300;
     line-height: 1.33;
     color: $gray;
+    letter-spacing: 0.1px;
   }
 }
 
 @media only screen and (max-width: $tablet-landscape-max) {
   .appointment {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 75px;
+    padding-bottom: 75px;
   }
 }
 
 @media only screen and (max-width: $mobile-max) {
   .appointment {
+    padding-top: 25px;
+    padding-bottom: 50px;
+
     &__row {
       display: block;
       padding-top: 15px;

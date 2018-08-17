@@ -3,7 +3,7 @@
 
 .assistant {
   background-color: $black;
-  padding: 87px 0px 65px 0px;
+  padding: 100px 0px 85px 0px;
 
   .subtitle {
     display: block;
@@ -11,27 +11,54 @@
     max-width: 750px;
   }
 
+  &__image {
+    margin-top: 75px;
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+  }
+
   &__list {
-    margin: 75px 0 0 0;
+    margin: 85px 0 0 0;
     @include row(3, 50px, 40px);
+  }
+
+  &__calibration {
+    position: absolute;
+    padding: 15px 15px 25px 15px;
+    min-height: 115px;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 15px;
+    background-color: #0643e8;
+    color: rgba(255, 255, 255, 0.75);
+    right: 95px;
+    top: -100px;
+
+    &:before {
+      position: absolute;
+      content: "";
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%) scaleY(-1);
+      width: 18px;
+      height: 10px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url('/images/icons/arrow.svg');
+    }
   }
 }
 
 .assistant-item {
-  &__image {
-    position: relative;
-    margin-bottom: 25px;
-
-    img {
-      width: 50px;
-    }
-  }
-
   &__title {
     display: block;
     font-weight: 400;
     font-size: 18px;
-    line-height: 1.39;
+    line-height: 1.4;
     color: white;
     margin-bottom: 15px;
   }
@@ -40,20 +67,19 @@
     color: $gray;
     font-size: 15px;
     line-height: 1.33;
+    letter-spacing: 0.1px;
   }
 }
 
 @media only screen and (max-width: $tablet-landscape-max) {
   .assistant {
-    padding-top: 50px;
-    padding-bottom: 30px;
+    padding-top: 74px;
+    padding-bottom: 58px;
   }
 }
 
 @media only screen and (max-width: $tablet-portrait-max) {
   .assistant {
-    padding-top: 25px;
-
     &__list {
       @include row(3, 40px, 40px);
     }
@@ -62,10 +88,16 @@
 
 @media only screen and (max-width: $mobile-max) {
   .assistant {
-    padding-bottom: 0px;
+    padding-top: 50px;
+    padding-bottom: 25px;
+
+    &__image {
+      margin-top: 50px;
+    }
 
     &__list {
-      @include row(2, 0px, 75px);
+      margin-top: 50px;
+      @include row(2, 0px, 50px);
     }
   }
 }
@@ -73,7 +105,7 @@
 @media only screen and (max-width: $mobile-small-max) {
   .assistant {
     &__list {
-      @include row(1, 0px, 75px);
+      @include row(1, 0px, 50px);
     }
   }
 }

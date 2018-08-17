@@ -3,108 +3,132 @@
 
 .token {
   background-color: $black;
-  padding: 58px 0px 75px 0px;
+  padding: 76px 0px 97px 0px;
 
   .subtitle {
     max-width: 750px;
   }
 
-  &__center {
-    margin: 0 auto;
+  &__calendar {
+    @include row(4, 0px, 0px);
     margin-top: 75px;
+    height: 200px;
+    display: flex;
+  }
+
+  &__col {
+    border-left: 1px solid rgba(255, 255, 255, .25);
+
+    &:first-child {
+      border-right: 1px solid transparent;
+    }
+
+    &_active {
+      background-image: radial-gradient(circle at 0% 50%, rgba(6, 67, 232, 0), #0643e8);
+    }
+  }
+
+  &__date, &__price {
     position: relative;
-    height: 450px;
-    width: 450px;
-
-    &.animated {
-      .token__semicircle {
-        &[data-position="1"] {
-          transform: translateX(-154%);
-        }
-
-        &[data-position="2"] {
-          transform: translateX(-76%);
-        }
-
-        &[data-position="4"] {
-          transform: scaleX(-1) translateX(-76%);
-        }
-
-        &[data-position="5"] {
-          transform: scaleX(-1) translateX(-154%);
-        }
-      }
-    }
+    height: 100px;
   }
 
-  &__circle, &__semicircle {
-    width: 450px;
-    height: 100%;
+  &__month {
+    display: block;
+    font-size: 15px;
+    line-height: 1.4;
+    color: $gray;
+    font-weight: 400;
+    margin-left: 15px;
+    letter-spacing: 0.1px;
+  }
+
+  &__name {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #ffffff;
+    margin-top: 1px;
+    margin-left: 15px;
+  }
+
+  &__price-usd {
     position: absolute;
-    background-image: url('../images/token/1.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    transition: all 1.5s ease;
-    z-index: 3;
+    left: 15px;
+    bottom: 27px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.67;
   }
 
-  &__semicircle {
-    background-image: url('../images/token/2.png');
-    width: 225px;
+  &__price-eth {
+    position: absolute;
+    left: 15px;
+    bottom: 2px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.4;
+  }
 
-    &[data-position="1"] {
-      left: 0;
-      z-index: 1;
-    }
+  &__day {
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+    font-size: 18px;
+    font-weight: 400;
+  }
 
-    &[data-position="2"] {
-      left: 0;
-      z-index: 2;
-    }
-
-    &[data-position="4"] {
-      right: 0;
-      z-index: 2;
-      transform: scaleX(-1);
-    }
-
-    &[data-position="5"] {
-      right: 0;
-      z-index: 1;
-      transform: scaleX(-1);
-    }
+  &__calendar-container {
+    @include tablet-container();
   }
 }
 
 @media only screen and (max-width: $tablet-landscape-max) {
   .token {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 50px;
+    padding-bottom: 75px;
+  }
+}
 
-    &__center, &__circle {
-      width: 35vw;
-      height: 35vw;
-    }
-
-    &__semicircle {
-      width: 17.5vw;
+@media only screen and (min-width: $tablet-portrait-max + 1px) and (max-width: $tablet-landscape-max) {
+  .token {
+    &__calendar > div {
+      width: auto;
+      flex: 1 1 auto;
     }
   }
 }
 
+@media only screen and (max-width: $tablet-portrait-max) {
+  .token {
+    padding-top: 25px;
+
+    &__calendar {
+      display: block;
+
+      > div, > li {
+        width: 100%;
+      }
+    }
+
+    &__col {
+      height: 200px;
+    }
+  }
+}
 
 @media only screen and (max-width: $mobile-max) {
   .token {
-    &__center, &__circle {
-      width: 37vw;
-      height: 37vw;
+    padding-top: 25px;
+    padding-bottom: 70px;
+
+    &__calendar {
+      margin-top: 50px;
     }
 
-    &__semicircle {
-      width: 18.5vw;
+    &__col {
+      border-right: 1px solid transparent;
     }
   }
 }
-
-

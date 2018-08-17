@@ -3,7 +3,7 @@
 
 .sales {
   background-color: $black;
-  padding: 75px 0px 75px 0px;
+  padding: 97px 0px 97px 0px;
 
   .subtitle {
     max-width: 550px;
@@ -17,11 +17,14 @@
 
   &__col {
     position: relative;
-    border-left: 1px solid rgba(255, 255, 255, .1);
+    border-left: 1px solid rgba(255, 255, 255, .25);
+
+    &:first-child {
+      border-right: 1px solid transparent;
+    }
 
     &:first-child {
       flex: 0 0 50%;
-      border-left: 1px solid rgba(255, 255, 255, 0);
 
       .sales__circle {
         width: 200px;
@@ -58,7 +61,7 @@
 
   &__title {
     position: absolute;
-    left: 10px;
+    left: 15px;
     top: 10px;
     font-size: 18px;
     font-weight: 400;
@@ -69,14 +72,15 @@
   &__count {
     position: absolute;
     bottom: 15px;
-    left: 10px;
+    left: 15px;
     color: $gray;
     font-size: 15px;
+    letter-spacing: 0.1px;
   }
 
   &__percent {
     position: absolute;
-    left: 10px;
+    left: 15px;
     bottom: 10px;
     font-weight: 400;
     font-size: 18px;
@@ -100,8 +104,8 @@
 
 @media only screen and (max-width: $tablet-landscape-max) {
   .sales {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 75px;
+    padding-bottom: 75px;
   }
 }
 
@@ -138,6 +142,21 @@
           height: 20px;
         }
       }
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile-max) {
+  .sales {
+    padding-top: 25px;
+    padding-bottom: 70px;
+
+    &__list {
+      margin-top: 50px;
+    }
+
+    &__col {
+      border-right: 1px solid transparent;
     }
   }
 }

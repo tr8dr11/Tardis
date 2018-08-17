@@ -3,23 +3,17 @@
 
 .partners {
   background-color: $black;
-  padding: 50px 0px 55px 0px;
+  padding: 75px 0px 90px 0px;
 
   &__list {
-    margin: 80px 0 0 0;
-    @include row(6, 55px, 50px);
+    margin: 50px 0 0 0;
+    @include row(6, 55px, 35px);
     justify-content: flex-start;
     align-items: center;
     align-content: center;
 
     > li {
       position: relative;
-      opacity: .6;
-      transition: opacity 0.3s ease;
-
-      &:hover {
-        opacity: 1;
-      }
 
       img {
         max-width: 100%;
@@ -30,21 +24,14 @@
 
 @media only screen and (max-width: $tablet-landscape-max) {
   .partners {
-    padding-top: 30px;
-    padding-bottom: 30px;
-
-    &__list {
-      margin-top: 50px;
-
-      li {
-        opacity: 1;
-      }
-    }
+    padding-top: 50px;
+    padding-bottom: 65px;
   }
 }
 
 @media only screen and (max-width: $tablet-portrait-max) {
   .partners {
+    padding-bottom: 45px;
     &__list {
       @include row(4, 40px, 42px);
     }
@@ -53,6 +40,9 @@
 
 @media only screen and (max-width: $mobile-max) {
   .partners {
+    padding-top: 50px;
+    padding-bottom: 25px;
+
     &__list {
       @include row(3, 20px, 30px);
     }

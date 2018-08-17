@@ -3,10 +3,10 @@
 
 .wallet {
   background-color: $black;
-  padding: 65px 0px 58px 0px;
+  padding: 85px 0px 80px 0px;
 
   .subtitle {
-    max-width: 550px;
+    max-width: 750px;
   }
 
   &__list {
@@ -23,7 +23,7 @@
     margin-bottom: 25px;
 
     img {
-      height: 120px;
+      height: 100px;
     }
   }
 
@@ -33,6 +33,7 @@
     line-height: 1.33;
     color: $gray;
     margin-bottom: 5px;
+    letter-spacing: 0.1px;
   }
 
   &__title {
@@ -40,7 +41,7 @@
     font-size: 18px;
     font-weight: 400;
     color: white;
-    line-height: 1.39;
+    line-height: 1.4;
     margin-bottom: 15px;
   }
 
@@ -48,30 +49,33 @@
     font-size: 15px;
     line-height: 1.33;
     color: $gray;
+    letter-spacing: 0.1px;
   }
 }
 
 @media only screen and (max-width: $tablet-landscape-max) {
   .wallet {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-}
+    padding-top: 54px;
+    padding-bottom: 54px;
 
-@media only screen and (max-width: $tablet-landscape-max) {
-  .wallet {
     &__list {
       @include row(3, 40px, 40px);
+    }
+
+    .subtitle {
+      max-width: 610px;
     }
   }
 }
 
 @media only screen and (max-width: $mobile-max) {
   .wallet {
-    padding-bottom: 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
 
     &__list {
-      @include row(2, 0px, 75px);
+      margin-top: 50px;
+      @include row(2, 0px, 50px);
     }
   }
 }
@@ -79,7 +83,7 @@
 @media only screen and (max-width: $mobile-small-max) {
   .wallet {
     &__list {
-      @include row(1, 0px, 75px);
+      @include row(1, 0px, 50px);
     }
   }
 }

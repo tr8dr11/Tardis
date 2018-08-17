@@ -9,22 +9,21 @@ $(document).ready(function() {
   var popupsDOM = $('.js-popup');
   var popupsCloseDOM = $('.js-popup-close');
   var scrollToDOM = $('.js-scroll-to');
-  var tokenCenterDOM = $('.js-token-animate');
   var contactsFormDOM = $('.js-contacts-form');
   var contactsThanksDOM = $('#js-contacts-thanks');
   var appointmentRow1DOM = $('#js-appointment-row-1');
   var appointmentRow2DOM = $('#js-appointment-row-2');
   var appointmentRow3DOM = $('#js-appointment-row-3');
   var sliders = $('.js-slider');
+  var headerLangListDOM = $('.js-header-lang-list');
+  var headerLangChoiceDOM = $('.js-header-lang-choice');
+  var imagesDOM = $('.js-img');
+  var videoDOM = $('.js-video');
 
   function binds() {
     $(window).ready(function() {
       scrollToTop();
     })
-
-    $(window).on('scroll', function(event){
-      scroll();
-    });
 
     $(window).on('resize', function() {
       resizeAppointment();
@@ -34,6 +33,23 @@ $(document).ready(function() {
         }
       })
       setTimeout(slidersInit, 100);
+      setImagesSrc();
+    });
+
+    $(document).on('click', function() {
+      headerLangListDOM.removeClass('visible')
+    });
+
+    videoDOM.on('click', function(event) {
+      var videoIframeDOM = $(this).find('iframe');
+      videoIframeDOM
+        .attr('src', videoIframeDOM.data('src'))
+        .css('display', 'block');
+    });
+
+    headerLangChoiceDOM.on('click', function(event) {
+      headerLangListDOM.toggleClass('visible');
+      event.stopPropagation();
     });
 
     showPopupButtonsDOM.on('click', function(event) {
@@ -71,23 +87,6 @@ $(document).ready(function() {
     })
   }
 
-  function scroll() {
-    if (!scrollTimeout) {
-      scrollTimeout = setTimeout(function () {
-        var viewportTop = $(window).scrollTop();
-        var tokenCenterTop = tokenCenterDOM.offset().top;
-
-        if (viewportTop + ($(window).height() / 1.5) >= tokenCenterTop &&
-          !tokenCenterDOM.hasClass('animated')
-        ) {
-          tokenCenterDOM.addClass('animated');
-        }
-
-        scrollTimeout = null;
-      })
-    }
-  }
-
   function resizeAppointment() {
     if (window.matchMedia('(max-width: ' + mobileMax + 'px)').matches) {
       appointmentRow1DOM.css('min-height', 'auto');
@@ -106,6 +105,14 @@ $(document).ready(function() {
     }
   }
 
+  function setImagesSrc() {
+    imagesDOM.each(function() {
+      if ($(this).css('display') !== 'none') {
+        $(this).attr('src', $(this).data('src'));
+      }
+    });
+  }
+
   function slidersInit() {
     var slidesToShow = 0;
     if (window.matchMedia('(max-width: ' + tabletMax + 'px)').matches) {
@@ -120,7 +127,7 @@ $(document).ready(function() {
       sliders.each(function () {
         if (!$(this).hasClass('js-slick-initialize')) {
 
-          const childrensDOM = $(this).children();
+          var childrensDOM = $(this).children();
 
           $(this).slick({
             infinite: false,
@@ -154,4 +161,5 @@ $(document).ready(function() {
   resizeAppointment();
   slidersInit();
   setTimeout(scrollToTop, 1);
+  setImagesSrc();
 })
