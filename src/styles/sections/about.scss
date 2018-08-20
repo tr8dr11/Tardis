@@ -83,6 +83,18 @@
         padding-left: 30px;
       }
     }
+
+    &__video {
+      background-image: none !important;
+    }
+
+    &__play {
+      display: none;
+    }
+
+    iframe {
+      display: block;
+    }
   }
 }
 
