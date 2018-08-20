@@ -339,3 +339,48 @@ h2 {
     margin: 0 auto;
   }
 }
+
+.text-popup {
+  position: absolute;
+  font-size: 16px;
+  text-align: center;
+
+  span {
+    opacity: 0;
+  }
+
+  span:hover + div {
+    @media only screen and (min-width: $tablet-portrait-max + 1px) {
+      opacity: 1;
+    }
+  }
+
+  &__info {
+    position: absolute;
+    padding: 15px 15px 25px 15px;
+    min-height: 115px;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 15px;
+    background-color: #0643e8;
+    color: rgba(255, 255, 255, 0.75);
+    bottom: 40px;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+
+    &:before {
+      position: absolute;
+      content: "";
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%) scaleY(-1);
+      width: 18px;
+      height: 10px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url('../images/icons/arrow.svg');
+    }
+  }
+}

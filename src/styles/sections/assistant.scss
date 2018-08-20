@@ -25,31 +25,11 @@
     @include row(3, 50px, 40px);
   }
 
-  &__calibration {
+  &__popup {
     position: absolute;
-    padding: 15px 15px 25px 15px;
-    min-height: 115px;
-    border-radius: 5px;
-    text-align: left;
-    font-size: 15px;
-    background-color: #0643e8;
-    color: rgba(255, 255, 255, 0.75);
+    top: 40px;
     right: 95px;
-    top: -100px;
-
-    &:before {
-      position: absolute;
-      content: "";
-      bottom: -10px;
-      left: 50%;
-      transform: translateX(-50%) scaleY(-1);
-      width: 18px;
-      height: 10px;
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-image: url('images/icons/arrow.svg');
-    }
+    width: 240px;
   }
 }
 
@@ -75,6 +55,16 @@
   .assistant {
     padding-top: 74px;
     padding-bottom: 58px;
+
+    &__popup {
+      top: 45px;
+      right: 8%;
+      top: 20%;
+
+      span {
+        font-size: 18px;
+      }
+    }
   }
 }
 
