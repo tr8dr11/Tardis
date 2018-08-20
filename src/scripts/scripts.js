@@ -40,11 +40,8 @@ $(document).ready(function() {
       headerLangListDOM.removeClass('visible')
     });
 
-    videoDOM.on('click', function(event) {
-      var videoIframeDOM = $(this).find('iframe');
-      videoIframeDOM
-        .attr('src', videoIframeDOM.data('src'))
-        .css('display', 'block');
+    videoDOM.on('click', function() {
+      videoInsert(true);
     });
 
     headerLangChoiceDOM.on('click', function(event) {
@@ -85,6 +82,15 @@ $(document).ready(function() {
         contactsThanksDOM.fadeIn(300);
       })
     })
+  }
+
+  function videoInsert(autoPlay) {
+    videoDOM.addClass('played');
+    var videoPlayButtonDOM = videoDOM.find('.about__video-play');
+    var videoIframeDOM = videoDOM.find('iframe');
+    videoIframeDOM
+      .attr('src', videoIframeDOM.data('src') + (autoPlay ? '&autoplay=1' : ''));
+    videoPlayButtonDOM.fadeOut(200);
   }
 
   function resizeAppointment() {
@@ -162,4 +168,8 @@ $(document).ready(function() {
   slidersInit();
   setTimeout(scrollToTop, 1);
   setImagesSrc();
+
+  if (navigator.userAgent.match(/Tablet|iPad/i) || navigator.userAgent.match(/Mobile|Windows Phone|Lumia|Android|webOS|iPhone|iPod|Blackberry|PlayBook|BB10|Opera Mini|\bCrMo\/|Opera Mobi/i)) {
+    videoInsert(false);
+  }
 })
