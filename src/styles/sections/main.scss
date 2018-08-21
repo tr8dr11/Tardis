@@ -258,6 +258,12 @@
     font-weight: 400;
     color: black;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $blue;
+      color: white;
+    }
   }
 
   a {

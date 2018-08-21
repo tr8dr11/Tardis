@@ -1,6 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
-    <g fill="none" fill-rule="nonzero">
-        <circle cx="25" cy="25" r="25" fill="#0643E8"/>
-        <path fill="#FFF" d="M33.643 25.848L20.53 34.044a1 1 0 0 1-1.53-.848V16.804a1 1 0 0 1 1.53-.848l13.113 8.196a1 1 0 0 1 0 1.696z"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>play</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Tardis_Laptop" transform="translate(-995.000000, -1225.000000)" fill-rule="nonzero">
+            <g id="Group-33" transform="translate(745.000000, 1100.000000)">
+                <g id="play" transform="translate(250.000000, 125.000000)">
+                    <circle id="Oval-3" fill="#0643E8" cx="25" cy="25" r="25"></circle>
+                    <path d="M33.6432027,25.8479983 L20.5299989,34.0437507 C20.0616624,34.336461 19.444712,34.1940878 19.1520017,33.7257513 C19.0526694,33.5668197 19,33.3831721 19,33.1957524 L19,16.8042476 C19,16.2519629 19.4477153,15.8042476 20,15.8042476 C20.1874197,15.8042476 20.3710673,15.8569171 20.5299989,15.9562493 L33.6432027,24.1520017 C34.1115392,24.444712 34.2539124,25.0616624 33.9612021,25.5299989 C33.8807214,25.6587681 33.7719718,25.7675176 33.6432027,25.8479983 Z" id="Triangle" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
     </g>
 </svg>

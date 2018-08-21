@@ -63,6 +63,14 @@
     height: 20px;
   }
 
+  &__lang-active {
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: .6;
+    }
+  }
+
   &__lang-choice {
     position: absolute;
     padding: 15px;
@@ -73,7 +81,7 @@
     right: 0;
     z-index: 100;
     background-color: #0643e8;
-    display: block;
+    display: none;
     transition: opacity 0.3s ease;
     border: none;
     color: white;
@@ -84,7 +92,6 @@
     -moz-appearance: none;
     text-indent: 1px;
     text-overflow: '';
-    display: none;
 
     &.visible {
       display: block;

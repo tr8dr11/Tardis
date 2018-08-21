@@ -97,5 +97,17 @@
     &__list {
       @include row(1, 0px, 50px);
     }
+
+    &__image {
+      transform: translateX(-10px);
+    }
+  }
+}
+
+@media only screen and (max-width: 355px) {
+  .assistant {
+    &__image {
+      transform: translateX(0);
+    }
   }
 }
