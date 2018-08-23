@@ -30,14 +30,24 @@ h2 {
   display: block;
   font-weight: 400;
   font-size: 33px;
+
+  @media only screen and (max-width: $mobile-max) {
+    font-size: 24px;
+    margin-bottom: 15px !important;
+  }
 }
 
 .subtitle {
   display: block;
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.4;
   margin-top: 25px;
+  letter-spacing: .2px;
+
+  @media only screen and (max-width: $mobile-max) {
+    margin-top: 0;
+  }
 }
 
 .container {
@@ -330,12 +340,13 @@ h2 {
 
 .img {
   @media only screen and (max-width: $mobile-small-max) {
-    max-width: 400px;
+    max-width: 375px;
+    width: 100%;
     margin: 0 auto;
   }
 
   @media only screen and (max-width: 400px) {
-    max-width: 300px;
+    max-width: 375px;
     margin: 0 auto;
   }
 }

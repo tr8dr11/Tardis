@@ -151,8 +151,17 @@
             <table class="main__list">
               <tr class="main-item">
                 <td class="main-item__info">
-                  <span class="main-item__arrow">→ </span>
-                  <span class="main-item__name">Pre-sale</span>
+                  <div class="main-item__info-content">
+                    <span class="main-item__name">
+                      <span class="main-item__arrow">→ </span>
+                      Pre-sale
+                    </span>
+                    <span class="main-item__state">Завершён</span>
+                    <span class="main-item__price-mobile">$0.05</span>
+                  </div>
+                </td>
+
+                <td class="main-item__state-tablet">
                   <span class="main-item__state">Завершён</span>
                 </td>
 
@@ -169,10 +178,17 @@
 
               <tr class="main-item main-item_active">
                 <td class="main-item__info">
-                  <span class="main-item__name">
-                    <span class="main-item__arrow">→ </span>
-                    Public sale
-                  </span>
+                  <div class="main-item__info-content">
+                    <span class="main-item__name">
+                      <span class="main-item__arrow">→ </span>
+                      Public sale
+                    </span>
+                    <span class="main-item__price-mobile">$0.08</span>
+                    <span class="main-item__state">До 10 октября</span>
+                  </div>
+                </td>
+
+                <td class="main-item__state-tablet">
                   <span class="main-item__state">До 10 октября</span>
                 </td>
 
@@ -189,11 +205,18 @@
 
               <tr class="main-item">
                 <td class="main-item__info">
-                  <span class="main-item__name">
-                    <span class="main-item__arrow">→ </span>
-                    Sale 2
-                  </span>
-                  <span class="main-item__state">11—15 октября</span>
+                  <div class="main-item__info-content">
+                    <span class="main-item__name">
+                      <span class="main-item__arrow">→ </span>
+                      Sale 2
+                    </span>
+                    <span class="main-item__price-mobile">$0.10</span>
+                    <span class="main-item__state">11—15 октября</span>
+                  </div>
+                </td>
+
+                <td class="main-item__state-tablet">
+                  <span class="main-item__state">11-15 октября</span>
                 </td>
 
                 <td class="main-item__price">
@@ -209,11 +232,18 @@
 
               <tr class="main-item">
                 <td class="main-item__info">
-                  <span class="main-item__name">
-                    <span class="main-item__arrow">→ </span>
-                    Sale 3
-                  </span>
-                  <span class="main-item__state">16—28 октября</span>
+                  <div class="main-item__info-content">
+                    <span class="main-item__name">
+                      <span class="main-item__arrow">→ </span>
+                      Sale 3
+                    </span>
+                    <span class="main-item__price-mobile">$0.13</span>
+                    <span class="main-item__state">16—28 октября</span>
+                  </div>
+                </td>
+
+                <td class="main-item__state-tablet">
+                  <span class="main-item__state">16-28 октября</span>
                 </td>
 
                 <td class="main-item__price">
@@ -455,137 +485,137 @@
   </section>
 
   <section class="marketplace">
-    <div class="container">
-      <h2>Маркетплейс</h2>
+     <div class="container">
+       <h2>Маркетплейс</h2>
 
-      <span class="subtitle">
-        Модульная система инвестиционных инструментов с возможностью подключения сторонних систем
-      </span>
+       <span class="subtitle">
+         Модульная система инвестиционных инструментов с&nbsp;возможностью подключения сторонних систем
+       </span>
 
-      <img
-        class="marketplace__image-mobile only-mobile-small js-img img"
-        data-src="images/marketplace/mobile-small-top.png"
-      />
+       <img
+         class="marketplace__image-mobile only-mobile-small js-img img"
+         data-src="images/marketplace/mobile-small-top.png"
+       />
 
-      <ul class="marketplace__list-2">
-        <li class="marketplace-item">
-          <span class="marketplace-item__name">
-            IODA
-          </span>
+       <ul class="marketplace__list-2">
+         <li class="marketplace-item">
+           <span class="marketplace-item__name">
+             IODA
+           </span>
 
-          <span class="marketplace-item__title">
-            Инвестирование в индексы<br />
-            топовых бирж
-          </span>
+           <span class="marketplace-item__title">
+             Инвестирование в&nbsp;индексы<br />
+             топовых бирж
+           </span>
 
-          <span class="marketplace-item__text">
-            Приложением представлены существующие на рынке индексы, индексы секторов технологий, юрисдикций, а также математические, на базе сформированных искуственным интеллектом данных.
-          </span>
-        </li>
+           <span class="marketplace-item__text">
+             Приложением представлены существующие на&nbsp;рынке индексы, индексы секторов технологий, юрисдикций, а&nbsp;также математические, на&nbsp;базе сформированных искуственным интеллектом данных.
+           </span>
+         </li>
 
-        <li class="marketplace-item">
-          <span class="marketplace-item__name">
-            SODA
-          </span>
+         <li class="marketplace-item">
+           <span class="marketplace-item__name">
+             SODA
+           </span>
 
-          <span class="marketplace-item__title">
-            Подключение трейдеров<br />
-            ключевых бирж
-          </span>
+           <span class="marketplace-item__title">
+             Подключение трейдеров<br />
+             ключевых бирж
+           </span>
 
-          <span class="marketplace-item__text">
-            Поставщиками прибыли (трейдеры или управляющие активами) могут стать клиенты бирж 0x, а также okex, binance, bitfinex, huobi, bittrex и hitbtc. При этом переводить средства в Tardis fund не требуется, достаточно подключиться к приложению SODA
-          </span>
+           <span class="marketplace-item__text">
+             Поставщиками прибыли (трейдеры или управляющие активами) могут стать клиенты бирж 0x, а&nbsp;также okex, binance, bitfinex, huobi, bittrex и&nbsp;hitbtc. При этом переводить средства в&nbsp;Tardis fund не&nbsp;требуется, достаточно подключиться к&nbsp;приложению SODA
+           </span>
+         </li>
+       </ul>
 
-          <img
-            class="marketplace-item__image only-mobile-small js-img img"
-            data-src="images/marketplace/mobile-small-vda.png"
-          />
-        </li>
-      </ul>
+       <div class="marketplace__image">
+         <img
+           class="only-desktop js-img img"
+           data-src="images/marketplace/desktop-top.png"
+         />
 
-      <div class="marketplace__image">
-        <img
-          class="only-desktop js-img img"
-          data-src="images/marketplace/desktop-top.png"
-        />
+         <img
+           class="only-tablet-landscape js-img img"
+           data-src="images/marketplace/tablet-landscape-top.png"
+         />
 
-        <img
-          class="only-tablet-landscape js-img img"
-          data-src="images/marketplace/tablet-landscape-top.png"
-        />
+         <img
+           class="only-tablet-portrait-mobile js-img img"
+           data-src="images/marketplace/tablet-portrait-top.png"
+         />
+       </div>
 
-        <img
-          class="only-tablet-portrait-mobile js-img img"
-          data-src="images/marketplace/tablet-portrait-top.png"
-        />
-      </div>
+       <ul class="marketplace__list-3">
+         <li class="marketplace-item">
+           <img
+             class="marketplace-item__image only-mobile-small js-img img"
+             data-src="images/marketplace/mobile-small-vda.png"
+           />
 
-      <ul class="marketplace__list-3">
-        <li class="marketplace-item">
-          <span class="marketplace-item__name">
-            VDA
-          </span>
+           <span class="marketplace-item__name">
+             VDA
+           </span>
 
-          <span class="marketplace-item__title">
-            Участие в любых ICO <br />
-            и пресейлах
-          </span>
+           <span class="marketplace-item__title">
+             Участие в любых ICO <br />
+             и пресейлах
+           </span>
 
-          <span class="marketplace-item__text">
-            Все ICO проходят дополнительный коллегиальный аудит инвесторами или автоматический если используется Квант-ассистент. Последний ещё на раннем этапе предлагает к исключению мошеннические или бесперспективные проекты.
-          </span>
+           <span class="marketplace-item__text">
+             Все ICO проходят дополнительный коллегиальный аудит инвесторами или автоматический если используется Квант-ассистент. Последний ещё на&nbsp;раннем этапе предлагает к&nbsp;исключению мошеннические или бесперспективные проекты.
+           </span>
+         </li>
 
-          <img
-            class="marketplace-item__image only-mobile-small js-img img"
-            data-src="images/marketplace/mobile-small-atai.png"
-          />
-        </li>
+         <li class="marketplace-item">
+           <img
+             class="marketplace-item__image only-mobile-small js-img img"
+             data-src="images/marketplace/mobile-small-atai.png"
+           />
 
-        <li class="marketplace-item">
-          <span class="marketplace-item__name">
-            ATAI
-          </span>
+           <span class="marketplace-item__name">
+             ATAI
+           </span>
 
-          <span class="marketplace-item__title">
-            Конструктор<br />
-            торговых ботов
-          </span>
+           <span class="marketplace-item__title">
+             Конструктор<br />
+             торговых ботов
+           </span>
 
-          <span class="marketplace-item__text">
-            Боты превосходят человека в скорости принятия решения и не совершают ошибок. Приложение ATAI предоставляет математическую и программную среду для разработки торговых алгоритмов и их аренды клиентами Tardis fund.
-          </span>
+           <span class="marketplace-item__text">
+             Боты превосходят человека в&nbsp;скорости принятия решения и&nbsp;не&nbsp;совершают ошибок. Приложение ATAI предоставляет математическую и&nbsp;программную среду для&nbsp;разработки торговых алгоритмов и&nbsp;их аренды клиентами Tardis fund.
+           </span>
+         </li>
 
-          <img
-            class="marketplace-item__image only-mobile-small js-img img"
-            data-src="images/marketplace/mobile-small-brro.png"
-          />
-        </li>
+         <li class="marketplace-item">
+           <img
+             class="marketplace-item__image only-mobile-small js-img img"
+             data-src="images/marketplace/mobile-small-brro.png"
+           />
 
-        <li class="marketplace-item">
-          <span class="marketplace-item__name">
-            BRRO
-          </span>
+           <span class="marketplace-item__name">
+             BRRO
+           </span>
 
-          <span class="marketplace-item__title">
-            P2P кредитование <br />
-            на блокчейне
-          </span>
+           <span class="marketplace-item__title">
+             P2P кредитование <br />
+             на блокчейне
+           </span>
 
-          <span class="marketplace-item__text">
-            Приложение BRRO агрегирует кредитную ликвидность существующих платформ, предоставляя клиентам Tardis fund лучшие варианты. К запуску предусмотрена работа с протоколом Ripio Credit.
-          </span>
-        </li>
-      </ul>
-    </div>
-  </section>
+           <span class="marketplace-item__text">
+             Приложение BRRO агрегирует кредитную ликвидность существующих платформ, предоставляя клиентам Tardis fund лучшие варианты. К&nbsp;запуску предусмотрена работа с&nbsp;протоколом Ripio Credit.
+           </span>
+         </li>
+       </ul>
+     </div>
+   </section>
 
   <section class="token">
     <div class="container">
       <h2>Токен Tardis Fund</h2>
       <span class="subtitle">
         Токен TFT можно использовать для оплаты комиссий маркетплейса Tardis fund включая, но&nbsp;не&nbsp;ограничиваясь: комиссия IApps, комиссия Кванта за&nbsp;данные, голосование, любая другая плата.
-        <br />
+        <br /><br />
         Продажи начнутся с 6:00 29 августа, инвесторы могут приобрести токены TFT в&nbsp;4&nbsp;этапа по принципу «первым пришел, первый получил», пока не&nbsp;будет продано 120 000 000 токенов.
       </span>
 
