@@ -150,8 +150,17 @@
             <table class="main__list">
               <tr class="main-item">
                 <td class="main-item__info">
-                  <span class="main-item__arrow">→ </span>
-                  <span class="main-item__name">Pre-sale</span>
+                  <div class="main-item__info-content">
+                    <span class="main-item__name">
+                      <span class="main-item__arrow">→ </span>
+                      Pre-sale
+                    </span>
+                    <span class="main-item__state">Завершён</span>
+                    <span class="main-item__price-mobile">$0.05</span>
+                  </div>
+                </td>
+
+                <td class="main-item__state-tablet">
                   <span class="main-item__state">Завершён</span>
                 </td>
 
@@ -168,10 +177,17 @@
 
               <tr class="main-item main-item_active">
                 <td class="main-item__info">
-                  <span class="main-item__name">
-                    <span class="main-item__arrow">→ </span>
-                    Public sale
-                  </span>
+                  <div class="main-item__info-content">
+                    <span class="main-item__name">
+                      <span class="main-item__arrow">→ </span>
+                      Public sale
+                    </span>
+                    <span class="main-item__price-mobile">$0.08</span>
+                    <span class="main-item__state">До 10 октября</span>
+                  </div>
+                </td>
+
+                <td class="main-item__state-tablet">
                   <span class="main-item__state">До 10 октября</span>
                 </td>
 
@@ -188,11 +204,18 @@
 
               <tr class="main-item">
                 <td class="main-item__info">
-                  <span class="main-item__name">
-                    <span class="main-item__arrow">→ </span>
-                    Sale 2
-                  </span>
-                  <span class="main-item__state">11—15 октября</span>
+                  <div class="main-item__info-content">
+                    <span class="main-item__name">
+                      <span class="main-item__arrow">→ </span>
+                      Sale 2
+                    </span>
+                    <span class="main-item__price-mobile">$0.10</span>
+                    <span class="main-item__state">11—15 октября</span>
+                  </div>
+                </td>
+
+                <td class="main-item__state-tablet">
+                  <span class="main-item__state">11-15 октября</span>
                 </td>
 
                 <td class="main-item__price">
@@ -208,11 +231,18 @@
 
               <tr class="main-item">
                 <td class="main-item__info">
-                  <span class="main-item__name">
-                    <span class="main-item__arrow">→ </span>
-                    Sale 3
-                  </span>
-                  <span class="main-item__state">16—28 октября</span>
+                  <div class="main-item__info-content">
+                    <span class="main-item__name">
+                      <span class="main-item__arrow">→ </span>
+                      Sale 3
+                    </span>
+                    <span class="main-item__price-mobile">$0.13</span>
+                    <span class="main-item__state">16—28 октября</span>
+                  </div>
+                </td>
+
+                <td class="main-item__state-tablet">
+                  <span class="main-item__state">16-28 октября</span>
                 </td>
 
                 <td class="main-item__price">
@@ -496,11 +526,6 @@
           <span class="marketplace-item__text">
             Поставщиками прибыли (трейдеры или управляющие активами) могут стать клиенты бирж 0x, а&nbsp;также okex, binance, bitfinex, huobi, bittrex и&nbsp;hitbtc. При этом переводить средства в&nbsp;Tardis fund не&nbsp;требуется, достаточно подключиться к&nbsp;приложению SODA
           </span>
-
-          <img
-            class="marketplace-item__image only-mobile-small js-img img"
-            data-src="images/marketplace/mobile-small-vda.png"
-          />
         </li>
       </ul>
 
@@ -523,6 +548,11 @@
 
       <ul class="marketplace__list-3">
         <li class="marketplace-item">
+          <img
+            class="marketplace-item__image only-mobile-small js-img img"
+            data-src="images/marketplace/mobile-small-vda.png"
+          />
+
           <span class="marketplace-item__name">
             VDA
           </span>
@@ -535,14 +565,14 @@
           <span class="marketplace-item__text">
             Все ICO проходят дополнительный коллегиальный аудит инвесторами или автоматический если используется Квант-ассистент. Последний ещё на&nbsp;раннем этапе предлагает к&nbsp;исключению мошеннические или бесперспективные проекты.
           </span>
+        </li>
 
+        <li class="marketplace-item">
           <img
             class="marketplace-item__image only-mobile-small js-img img"
             data-src="images/marketplace/mobile-small-atai.png"
           />
-        </li>
 
-        <li class="marketplace-item">
           <span class="marketplace-item__name">
             ATAI
           </span>
@@ -555,14 +585,14 @@
           <span class="marketplace-item__text">
             Боты превосходят человека в&nbsp;скорости принятия решения и&nbsp;не&nbsp;совершают ошибок. Приложение ATAI предоставляет математическую и&nbsp;программную среду для&nbsp;разработки торговых алгоритмов и&nbsp;их аренды клиентами Tardis fund.
           </span>
+        </li>
 
+        <li class="marketplace-item">
           <img
             class="marketplace-item__image only-mobile-small js-img img"
             data-src="images/marketplace/mobile-small-brro.png"
           />
-        </li>
 
-        <li class="marketplace-item">
           <span class="marketplace-item__name">
             BRRO
           </span>
@@ -585,7 +615,7 @@
       <h2>Токен Tardis Fund</h2>
       <span class="subtitle">
         Токен TFT можно использовать для оплаты комиссий маркетплейса Tardis fund включая, но&nbsp;не&nbsp;ограничиваясь: комиссия IApps, комиссия Кванта за&nbsp;данные, голосование, любая другая плата.
-        <br />
+        <br /><br />
         Продажи начнутся с 6:00 29 августа, инвесторы могут приобрести токены TFT в&nbsp;4&nbsp;этапа по принципу «первым пришел, первый получил», пока не&nbsp;будет продано 120 000 000 токенов.
       </span>
 
