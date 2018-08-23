@@ -4,6 +4,7 @@ var mobileSmallMax = 500;
 var throttle = 5;
 var scrollTimeout;
 var mainDOM = $('.main');
+let previousWindowWidth = 0;
 
 function resize() {
   var windowHeight = window.innerHeight;
@@ -36,14 +37,18 @@ $(document).ready(function() {
     })
 
     $(window).on('resize', function() {
-      resizeAppointment();
-      sliders.each(function() {
-        if ($(this).hasClass('js-slick-initialize')) {
-          $(this).slick('unslick').removeClass('js-slick-initialize');
-        }
-      })
-      setTimeout(slidersInit, 100);
-      setImagesSrc();
+      if (previousWindowWidth !== window.innerWidth) {
+        resizeAppointment();
+        sliders.each(function () {
+          if ($(this).hasClass('js-slick-initialize')) {
+            $(this).slick('unslick').removeClass('js-slick-initialize');
+          }
+        })
+        setTimeout(slidersInit, 100);
+        setImagesSrc();
+      }
+      
+      previousWindowWidth = window.innerWidth;
     });
 
     $(document).on('click', function() {
