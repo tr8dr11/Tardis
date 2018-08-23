@@ -4,11 +4,9 @@
 .main {
   position: relative;
   background-color: black;
-  min-height: 100vh;
-
+  
   > .container {
     position: relative;
-    min-height: 100vh;
     z-index: 3;
     display: flex;
     flex-direction: column;
@@ -293,8 +291,6 @@
 
 @media only screen and (max-width: $tablet-portrait-max) {
   .main {
-    min-height: 100vh;
-
     &__subtitle {
       margin-bottom: 50px;
     }
@@ -346,12 +342,6 @@
 
 @media only screen and (max-width: $mobile-max) {
   .main {
-    min-height: 100vh;
-
-    .container {
-      min-height: 100vh;
-    }
-
     &__white-paper, &__telegram {
       width: 130px;
     }

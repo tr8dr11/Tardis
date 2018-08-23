@@ -3,6 +3,20 @@ var mobileMax = 767;
 var mobileSmallMax = 500;
 var throttle = 5;
 var scrollTimeout;
+var mainDOM = $('.main');
+
+window.onresize = function() {
+  resize();
+}
+
+function resize() {
+  var windowHeight = window.innerHeight;
+  console.log(mainDOM);
+  mainDOM.get(0).style.minHeight = windowHeight + 'px';
+  mainDOM.find('> .container').get(0).style.minHeight = windowHeight + 'px';
+}
+
+resize();
 
 $(document).ready(function() {
   var showPopupButtonsDOM = $('.js-show-popup');
