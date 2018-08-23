@@ -86,7 +86,11 @@ $(document).ready(function() {
       var data = $(this).serialize();
       var url = $(this).attr("action");
 
-      $.post(url, data);
+      $.post({
+        url,
+        data,
+        dataType: 'jsonp',
+      });
       contactsFormDOM.fadeOut(300, function () {
         contactsThanksDOM.fadeIn(300);
       })
