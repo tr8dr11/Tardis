@@ -8,7 +8,6 @@ let previousWindowWidth = 0;
 
 function resize() {
   var windowHeight = window.innerHeight;
-  console.log(mainDOM);
   mainDOM.get(0).style.minHeight = windowHeight + 'px';
   mainDOM.find('> .container').get(0).style.minHeight = windowHeight + 'px';
 }
@@ -47,7 +46,7 @@ $(document).ready(function() {
         setTimeout(slidersInit, 100);
         setImagesSrc();
       }
-      
+
       previousWindowWidth = window.innerWidth;
     });
 
