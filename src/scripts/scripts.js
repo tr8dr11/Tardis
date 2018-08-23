@@ -5,10 +5,6 @@ var throttle = 5;
 var scrollTimeout;
 var mainDOM = $('.main');
 
-window.onresize = function() {
-  resize();
-}
-
 function resize() {
   var windowHeight = window.innerHeight;
   console.log(mainDOM);
