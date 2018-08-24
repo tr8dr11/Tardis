@@ -81,16 +81,6 @@ $(document).ready(function() {
     });
 
     contactsFormDOM.on('submit', function(event) {
-      event.preventDefault();
-
-      var data = $(this).serialize();
-      var url = $(this).attr("action");
-
-      $.post({
-        url,
-        data,
-        dataType: 'jsonp',
-      });
       contactsFormDOM.fadeOut(300, function () {
         contactsThanksDOM.fadeIn(300);
       })
