@@ -20,10 +20,6 @@
  	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/android-chrome-72x72.png">
  	<link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-57x57.png">
  	<!--[if IE]><link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"><![endif]-->
-  <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
-  <style type="text/css">
-      #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-  </style>
 </head>
 <body class="jpn">
   <section class="main">
@@ -1140,25 +1136,54 @@
           </span>
 
           <div class="contacts__form">
-            <form action="https://tardis.us19.list-manage.com/subscribe/post?u=67e687cf86b71cd8e1c106b1b&amp;id=0f523a0b88" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate js-contacts-form" target="_blank">
-              <input
-                name="EMAIL"
-                class="contacts__email"
-                type="email"
-                id="mce-EMAIL"
-                placeholder="E-mail"
-                required
-              />
 
-              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_67e687cf86b71cd8e1c106b1b_0f523a0b88" tabindex="-1" value=""></div>
-
-              <input
-                class="contacts__submit"
-                type="submit"
-                name="subscribe"
-                value="Подписаться"
+            <!-- Begin MailChimp Signup Form -->
+            <div id="mc_embed_signup">
+            <form action="https://tardis.us19.list-manage.com/subscribe/post?u=67e687cf86b71cd8e1c106b1b&amp;id=0f523a0b88" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate js-contacts-form" target="_blank" novalidate>
+            	<input type="email"
+               placeholder="E-mail"
+               value=""
+               name="EMAIL"
+               class="required email contacts__email"
+               id="mce-EMAIL"
               />
+              <input type="text" name="b_67e687cf86b71cd8e1c106b1b_0f523a0b88" tabindex="-1" value=""
+                     style="display: none"
+              >
+             <input type="submit" value="Подписаться" name="subscribe" id="mc-embedded-subscribe" class="button contacts__submit">
+
+            	<div id="mce-responses" class="clear">
+            		<div class="response" id="mce-error-response" style="display:none">
+                </div>
+            		<div class="response" id="mce-success-response" style="display:none">
+                </div>
+            	</div>
             </form>
+            </div>
+            <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email'; /*
+             * Translated default messages for the $ validation plugin.
+             * Locale: RU
+             */
+            $.extend($.validator.messages, {
+              required: "Это поле необходимо заполнить.",
+              remote: "Пожалуйста, введите правильное значение.",
+              email: "Пожалуйста, введите корректный адрес электронной почты.",
+              url: "Пожалуйста, введите корректный URL.",
+              date: "Пожалуйста, введите корректную дату.",
+              dateISO: "Пожалуйста, введите корректную дату в формате ISO.",
+              number: "Пожалуйста, введите число.",
+              digits: "Пожалуйста, вводите только цифры.",
+              creditcard: "Пожалуйста, введите правильный номер кредитной карты.",
+              equalTo: "Пожалуйста, введите такое же значение ещё раз.",
+              accept: "Пожалуйста, выберите файл с правильным расширением.",
+              maxlength: $.validator.format("Пожалуйста, введите не больше {0} символов."),
+              minlength: $.validator.format("Пожалуйста, введите не меньше {0} символов."),
+              rangelength: $.validator.format("Пожалуйста, введите значение длиной от {0} до {1} символов."),
+              range: $.validator.format("Пожалуйста, введите число от {0} до {1}."),
+              max: $.validator.format("Пожалуйста, введите число, меньшее или равное {0}."),
+              min: $.validator.format("Пожалуйста, введите число, большее или равное {0}.")
+            });}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+            <!--End mc_embed_signup-->
 
             <div class="contacts__thanks" id="js-contacts-thanks">
               Спасибо!<br /><br />
