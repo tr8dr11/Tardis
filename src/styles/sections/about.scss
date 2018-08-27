@@ -70,6 +70,18 @@
     background-image: url('../images/about/play.svg');
     cursor: pointer;
   }
+
+  &__video.mounted {
+    background-image: none !important;
+
+    .about__video-play {
+      display: none;
+    }
+
+    iframe {
+      display: block;
+    }
+  }
 }
 
 @media only screen and (max-width: $tablet-landscape-max) {
@@ -82,18 +94,6 @@
       > div {
         padding-left: 30px;
       }
-    }
-
-    &__video {
-      background-image: none !important;
-    }
-
-    &__play {
-      display: none;
-    }
-
-    iframe {
-      display: block;
     }
   }
 }
