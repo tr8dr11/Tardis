@@ -48,7 +48,7 @@
   &__email {
     display: inline-block;
     vertical-align: middle;
-    width: 175px;
+    width: 220px;
     height: 45px;
     border: solid 1px rgba(255, 255, 255, .15);
     padding-left: 15px;
@@ -110,6 +110,10 @@
 @media only screen and (max-width: $tablet-landscape-max) {
   .contacts {
     padding-top: 150px;
+
+    &__email {
+      width: 170px;
+    }
   }
 }
 
